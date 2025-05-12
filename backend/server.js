@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors())  
 
 const allowedOrigins = [
-  "http://localhost:5173",  
+  "https://task-tracker-lsul.onrender.com/",  
 ];
 
 app.use(cors({
