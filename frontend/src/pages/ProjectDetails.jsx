@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,9 +37,7 @@ function ProjectDetail() {
   };
 
   const handleDelete = (taskId) => {
-    const confirmed = window.confirm(
-      "Are you sure you want to delete this task?"
-    );
+    const confirmed = window.confirm("Are you sure you want to delete this task?");
     if (confirmed) {
       dispatch(deleteTask(taskId));
     }
@@ -58,12 +57,12 @@ function ProjectDetail() {
         setEditingTaskId(null);
         setEditTitle("");
         setEditDescription("");
-        dispatch(fetchTasks(id)); // Optional: Refresh after update
+        dispatch(fetchTasks(id));
       });
   };
 
   return (
-    <div className="p-6 max-w-3xl mx-auto">
+    <div className="p-4 sm:p-6 max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-4">Project Tasks</h2>
 
       <form onSubmit={handleCreate} className="flex flex-col gap-2 mb-6">
@@ -97,8 +96,8 @@ function ProjectDetail() {
         <ul className="space-y-4">
           {tasks.map((task) => (
             <li key={task._id} className="p-4 border rounded shadow-sm">
-              <div className="flex justify-between items-start gap-4">
-                <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                <div className="flex-1 min-w-0">
                   {editingTaskId === task._id ? (
                     <>
                       <input
@@ -114,14 +113,15 @@ function ProjectDetail() {
                     </>
                   ) : (
                     <>
-                      <h3 className="font-semibold text-lg">{task.title}</h3>
-                      <p className="text-sm text-gray-700">{task.description}</p>
+                      <h3 className="font-semibold text-lg break-words">{task.title}</h3>
+                      <p className="text-sm text-gray-700 break-words">{task.description}</p>
                     </>
                   )}
                   <p className="text-xs text-gray-500 mt-1">Status: {task.status}</p>
                   <p className="text-xs text-gray-500 mt-1">Created: {task.createdAt}</p>
                 </div>
-                <div className="flex flex-col items-end gap-2">
+
+                <div className="flex flex-wrap sm:flex-col items-start sm:items-end gap-2">
                   <select
                     value={task.status}
                     onChange={(e) => handleStatusChange(task._id, e.target.value)}
