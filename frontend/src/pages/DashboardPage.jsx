@@ -6,6 +6,7 @@ import {
   fetchProjects,
   deleteProject,
 } from "../features/projects/projectSlice";
+import Spinner from "../components/Spinner";
 
 export default function DashboardPage() {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ export default function DashboardPage() {
   const { projects, loading, error } = useSelector((state) => state.project);
 
   const { user, loadingUser } = useSelector((state) => state.auth);
-  console.log("user :-",user)
+  // console.log("user :-",user)
   const token = useSelector((state) => state.auth.token);
 
 
@@ -67,7 +68,7 @@ export default function DashboardPage() {
         </button>
       </form>
 
-      {loading && <p className="text-gray-600 mb-4">Loading projects...</p>}
+      {loading && <Spinner/>}
       {error && <p className="text-red-500 mb-4">{error}</p>}
       {!loading && projects.length === 0 && (
         <p className="text-gray-500 text-center">
