@@ -31,14 +31,31 @@ A full-stack task and project management application built with **React**, **Exp
 ---
 
 ## Screenshots
+### Dashboard Page
 ![Dashboard](./screenshots/Home.png)
+
+### Signup Page
 ![Regiter Page](./screenshots/signup.png)
+
+### Login Page
 ![Login Page](./screenshots/login.png)
+
+### Profile Page
 ![Profile Page](./screenshots/profile.png)
+
+### Create-Project Page
 ![Create-Poject Page](./screenshots/create-project.png)
+
+### Task-Create Page
 ![Task Page](./screenshots/Taskcreatd.png)
+
+### Edit-Task Page
 ![Edit-Tasks Page](./screenshots/edit.png)
+
+### Mobile Page
 ![Mobile Responsive](./screenshots/mobile.png)
+
+### Mobile Responsive
 ![Mobile Responsive](./screenshots/mobile1.png)
 
 ---
@@ -141,8 +158,10 @@ task-tracker/
 
 ---
 
-## License
+📝 License
+This project is open-source and free to use.
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+🙌 Thank You
+Thanks for checking out this project! 😊
 
 
