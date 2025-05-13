@@ -31,8 +31,6 @@ A full-stack task and project management application built with **React**, **Exp
 ---
 
 ## Screenshots
-
-```md
 ![Dashboard](./screenshots/Home.png)
 ![Regiter Page](./screenshots/signup.png)
 ![Login Page](./screenshots/login.png)
@@ -43,7 +41,11 @@ A full-stack task and project management application built with **React**, **Exp
 ![Mobile Responsive](./screenshots/mobile.png)
 ![Mobile Responsive](./screenshots/mobile1.png)
 
-```
+---
+
+## 🌐 Live Demo
+
+👉 [Click here to view live demo](https://task-tracker-lsul.onrender.com/)
 
 ---
 ### Local Setup
